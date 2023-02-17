@@ -18,7 +18,6 @@
 + Số lượng dữ liệu: 663 ảnh
 + Các thao tác tiền xử lý dữ liệu:
   + Sử dụng [Roboflow](https://roboflow.com) để tạo label. Ứng với mỗi ảnh là một file `.txt` chứa thông tin của label.
-  + [Dataset](https://drive.google.com/drive/folders/1DSaJJoWNSciMpbE8Q3MllVowj5HERWa7?usp=share_link)
 + Phân chia (split) - train/dev/test:
   + Training set: 489 ảnh
   + Validation set: 87 ảnh
@@ -31,6 +30,8 @@
     + Chiều rộng của Bounding Box $(b_w)$
     + Chiều cao của Bounding Box $(b_h)$
   + Data processing pipeline:
+    + 
+  + [Dataset](https://drive.google.com/drive/folders/1DSaJJoWNSciMpbE8Q3MllVowj5HERWa7?usp=share_link)
   
 ***4. Mô tả về thuật toán máy học:***
   + Sử dụng mô hình YOLOv5: YOLOv5 là một mô hình Object Detection thuộc họ mô hình YOLO
