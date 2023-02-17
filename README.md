@@ -17,7 +17,8 @@
   + Tự xây dựng dữ liệu với dữ liệu được lấy từ camera giao thông của [Sở giao thông vận tải](http://giaothong.hochiminhcity.gov.vn/map.aspx) và [Insecam](http://www.insecam.org/en/bycountry/VN/).
 + Số lượng dữ liệu: 663 ảnh
 + Các thao tác tiền xử lý dữ liệu:
-  + Sử dụng [Makesense](https://www.makesense.ai) để tạo và gán label cho các Bounding Box . Ứng với mỗi ảnh là một file `.txt` chứa thông tin của label.
+  + Sử dụng [Roboflow](https://roboflow.com) để tạo label. Ứng với mỗi ảnh là một file `.txt` chứa thông tin của label.
+  + [Dataset](https://drive.google.com/drive/folders/1DSaJJoWNSciMpbE8Q3MllVowj5HERWa7?usp=share_link)
 + Phân chia (split) - train/dev/test:
   + Training set: 489 ảnh
   + Validation set: 87 ảnh
