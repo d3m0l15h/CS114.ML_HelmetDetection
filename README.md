@@ -20,7 +20,7 @@
 + Số lượng dữ liệu: **663 ảnh**
 + Các thao tác tiền xử lý dữ liệu:
   + Sử dụng [Roboflow](https://roboflow.com) để tạo label. Ứng với mỗi ảnh là một file `.txt` chứa thông tin của label phù hợp với format của YOLOv5.
-  + Nội dung file `.txt`: ``class_id` `center_x` `center_y` `width` `height``  
+  + Nội dung file `.txt` bao gồm: `class_id` `center_x` `center_y` `width` `height`
     + Example: `1 0.37109375 0.51171875 0.021875 0.03515625`
 + Phân chia (split) - train/dev/test:
   + Training set: **489 ảnh**
