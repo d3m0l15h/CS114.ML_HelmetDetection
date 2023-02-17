@@ -31,8 +31,6 @@
     + Tọa độ trung tâm của Bounding Box $(b_x,b_y)$
     + Chiều rộng của Bounding Box $(b_w)$
     + Chiều cao của Bounding Box $(b_h)$
-  + Data processing pipeline:
-    + 
   + [Dataset](https://drive.google.com/drive/folders/1DSaJJoWNSciMpbE8Q3MllVowj5HERWa7?usp=share_link)
   
 ***4. Mô tả về thuật toán máy học:***
@@ -48,9 +46,7 @@
       + Chiều cao của Bounding Box $(b_h)$
       + Nhãn của đối tượng trong Bounding Box (c)
       + Xác suất có đối tượng trong Bounding Box $(p_c)$
-      
-***5. Cài đặt, tinh chỉnh tham số:***
-
+     
 ***6. Đánh giá kết quả, kết luận:***
 
 
