@@ -15,6 +15,7 @@
 ***2. Mô tả về bộ dữ liệu:***
 + Cách thức xây dựng bộ dữ liệu:
   + Tự xây dựng dữ liệu với dữ liệu được lấy từ camera giao thông của [Sở giao thông vận tải](http://giaothong.hochiminhcity.gov.vn/map.aspx) và [Insecam](http://www.insecam.org/en/bycountry/VN/).
+![example](/images/img_example.jpg)
 + Số lượng dữ liệu: 663 ảnh
 + Các thao tác tiền xử lý dữ liệu:
   + Sử dụng [Roboflow](https://roboflow.com) để tạo label. Ứng với mỗi ảnh là một file `.txt` chứa thông tin của label.
