@@ -50,5 +50,5 @@
 ***6. Đánh giá kết quả, kết luận:***
 
 
-=> Kết quả chạy trên Colab[Colab](https://colab.research.google.com/drive/1YNQh8u59gZKF3RymvUp_BGZdewoUNNVv)
+=> Kết quả chạy trên [Colab](https://colab.research.google.com/drive/1YNQh8u59gZKF3RymvUp_BGZdewoUNNVv)
 
