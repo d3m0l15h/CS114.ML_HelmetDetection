@@ -20,6 +20,7 @@
 + Số lượng dữ liệu: **663 ảnh**
 + Các thao tác tiền xử lý dữ liệu:
   + Sử dụng [Roboflow](https://roboflow.com) để tạo label. Ứng với mỗi ảnh là một file `.txt` chứa thông tin của label.
+  + Nội dung file `.txt`:  `1 0.37109375 0.51171875 0.021875 0.03515625`
 + Phân chia (split) - train/dev/test:
   + Training set: **489 ảnh**
   + Validation set: **87 ảnh**
