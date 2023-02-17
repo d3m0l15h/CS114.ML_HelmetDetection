@@ -34,7 +34,7 @@
   + [Dataset](https://drive.google.com/drive/folders/1DSaJJoWNSciMpbE8Q3MllVowj5HERWa7?usp=share_link)
   
 ***4. Mô tả về thuật toán máy học:***
-  + Sử dụng mô hình YOLOv5: YOLOv5 là một mô hình Object Detection thuộc họ mô hình YOLO
+  + Sử dụng mô hình [YOLOv5](https://github.com/ultralytics/yolov5): YOLOv5 là một mô hình Object Detection thuộc họ mô hình YOLO
   + YOLO là một thuật toán Single Stage Detector (Single Shot Detector), nghĩa là chúng sẽ dự đoán nhãn và vị trí của đối tượng trong toàn bộ bức ảnh chỉ với một lần chạy thuật toán duy nhất. Và tất nhiên, cách làm việc này giúp cho thời gian xử lý của YOLO rất nhanh, phù hợp với các ứng dụng cần chạy Realtime.
   + YOLO là một mô hình mạng neural tích chập (CNN) dùng cho việc phát hiện, nhận dạng, phân loại đối tượng. YOLO được tạo ra từ việc kết hợp giữa các lớp phức tạp (convolutional layers) cho phép trích xuất ra các đặc tính của ảnh và lớp kết nối (connected layers) dự đoán ra xác suất xuất hiện và tọa độ của đối tượng.
   + Cách làm viêc của YOLO có thể tóm tắt như sau:
