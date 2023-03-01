@@ -14,13 +14,13 @@
 
 ***2. Mô tả về bộ dữ liệu:***
 + Cách thức xây dựng bộ dữ liệu:
-  + Tự xây dựng dữ liệu với dữ liệu được lấy từ camera giao thông của [Sở giao thông vận tải](http://giaothong.hochiminhcity.gov.vn/map.aspx) và [Insecam](http://www.insecam.org/en/bycountry/VN/).
+  + Tự xây dựng dữ liệu với hình ảnh được lấy từ camera giao thông của [Sở giao thông vận tải](http://giaothong.hochiminhcity.gov.vn/map.aspx) và [Insecam](http://www.insecam.org/en/bycountry/VN/).
   + Ảnh lấy được từ data:
 ![example](/images/img_example.jpeg)
 + Số lượng dữ liệu: **1109 ảnh**
 + Các thao tác tiền xử lý dữ liệu: 
   + Resize ảnh về kích thước: 640x640 pixel 
-  + Sử dụng [Roboflow](https://roboflow.com) để tạo label. Ứng với mỗi ảnh là một file `.txt` chứa thông tin của label phù hợp với format của YOLOv5.
+  + Sử dụng [Roboflow](https://roboflow.com) để tạo label cho các đối tượng trong ảnh (đối tượng ở đây là đầu của người tham gia giao thông). Ứng với mỗi ảnh là một file `.txt` chứa thông tin của label phù hợp với format của YOLOv5.
   + Nội dung file `.txt` bao gồm: `class_id` `center_x` `center_y` `width` `height`
     + Ví dụ: `1 0.37109375 0.51171875 0.021875 0.03515625`
 + Phân chia (split) - train/dev/test:
