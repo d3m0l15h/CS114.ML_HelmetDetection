@@ -5,7 +5,7 @@
 | 20521481  | Phan Minh Khôi |
 | 21521930 | Đào Tiến Đạt |
 ---
-# **Đề tài: Đếm số người đội và không đội mũ bảo hiểm khi tham gia giao thông từ hình ảnh hoặc video.**
+# **Đề tài: Nhận diện người đội và không đội mũ bảo hiểm khi tham gia giao thông từ hình ảnh hoặc video.**
 ***1. Mô tả bài toán:***
 + **Input**: Một ảnh màu có một hoặc nhiều đối tượng đội nón bảo hiểm hoặc đối tượng không đội nón bảo hiểm.
 + **Output**: Một hoặc nhiều bounding box (nhãn + vị trí) của đối tượng đổi nón bảo hiểm hoặc đối tượng không đội nón bảo hiểm.
@@ -22,12 +22,15 @@
   + Resize ảnh về kích thước: 640x640 pixel 
   + Sử dụng [Roboflow](https://roboflow.com) để tạo label. Ứng với mỗi ảnh là một file `.txt` chứa thông tin của label phù hợp với format của YOLOv5.
   + Nội dung file `.txt` bao gồm: `class_id` `center_x` `center_y` `width` `height`
-    + Example: `1 0.37109375 0.51171875 0.021875 0.03515625`
+    + Ví dụ: `1 0.37109375 0.51171875 0.021875 0.03515625`
 + Phân chia (split) - train/dev/test:
   + Training set: **800 ảnh**
   + Validation set: **175 ảnh**
   + Testing set: **134 ảnh**
-  
++ Số lượng label:
+  + With helmet: 4145 đối tượng
+  + Without helmet: 660 đối tượng
+
 ***3. Mô tả đặc trưng:***
   + Feature Engineering:
     + Nhãn của đối tượng trong Bounding Box: [0: With helmet, 1: Without helmet]
