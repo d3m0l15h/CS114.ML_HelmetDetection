@@ -54,7 +54,5 @@
       + Xác suất có đối tượng trong Bounding Box $(p_c)$
      
 ***6. Đánh giá kết quả, kết luận:***
-
-
-=> Kết quả chạy trên [Colab](https://colab.research.google.com/drive/1YNQh8u59gZKF3RymvUp_BGZdewoUNNVv)
+  + Theo dõi chi tiết kết quả chạy trên [Colab](https://colab.research.google.com/drive/1YNQh8u59gZKF3RymvUp_BGZdewoUNNVv)
 
