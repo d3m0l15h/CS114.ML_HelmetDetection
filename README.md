@@ -5,7 +5,7 @@
 | 20521481  | Phan Minh Khôi |
 | 21521930 | Đào Tiến Đạt |
 ---
-# **Đề tài: Đếm số người đội mũ bảo hiểm khi tham gia giao thông từ hình ảnh hoặc video.**
+# **Đề tài: Nhận diện người đội và không đội mũ bảo hiểm khi tham gia giao thông từ hình ảnh hoặc video.**
 ***1. Mô tả bài toán:***
 + **Input**: Một ảnh màu có một hoặc nhiều đối tượng đội nón bảo hiểm hoặc đối tượng không đội nón bảo hiểm.
 + **Output**: Một hoặc nhiều bounding box (nhãn + vị trí) của đối tượng đổi nón bảo hiểm hoặc đối tượng không đội nón bảo hiểm.
@@ -17,26 +17,30 @@
   + Tự xây dựng dữ liệu với dữ liệu được lấy từ camera giao thông của [Sở giao thông vận tải](http://giaothong.hochiminhcity.gov.vn/map.aspx) và [Insecam](http://www.insecam.org/en/bycountry/VN/).
   + Ảnh lấy được từ data:
 ![example](/images/img_example.jpeg)
-+ Số lượng dữ liệu: **663 ảnh**
-+ Các thao tác tiền xử lý dữ liệu:
-  + Sử dụng [Roboflow](https://roboflow.com) để tạo label. Ứng với mỗi ảnh là một file `.txt` chứa thông tin của label.
++ Số lượng dữ liệu: **1109 ảnh**
++ Các thao tác tiền xử lý dữ liệu: 
+  + Resize ảnh về kích thước: 640x640 pixel 
+  + Sử dụng [Roboflow](https://roboflow.com) để tạo label. Ứng với mỗi ảnh là một file `.txt` chứa thông tin của label phù hợp với format của YOLOv5.
+  + Nội dung file `.txt` bao gồm: `class_id` `center_x` `center_y` `width` `height`
+    + Ví dụ: `1 0.37109375 0.51171875 0.021875 0.03515625`
 + Phân chia (split) - train/dev/test:
-  + Training set: **489 ảnh**
-  + Validation set: **87 ảnh**
-  + Testing set: **87 ảnh**
-  
+  + Training set: **800 ảnh**
+  + Validation set: **175 ảnh**
+  + Testing set: **134 ảnh**
++ Số lượng label:
+  + With helmet: 4145 đối tượng
+  + Without helmet: 660 đối tượng
+
 ***3. Mô tả đặc trưng:***
   + Feature Engineering:
-    + Nhãn của đối tượng trong Bounding Box: [0: helmet, 1: no_helmet]
+    + Nhãn của đối tượng trong Bounding Box: [0: With helmet, 1: Without helmet]
     + Tọa độ trung tâm của Bounding Box $(b_x,b_y)$
     + Chiều rộng của Bounding Box $(b_w)$
     + Chiều cao của Bounding Box $(b_h)$
-  + Data processing pipeline:
-    + 
-  + [Dataset](https://drive.google.com/drive/folders/1DSaJJoWNSciMpbE8Q3MllVowj5HERWa7?usp=share_link)
+  + [Dataset](https://drive.google.com/drive/folders/19v54FWdpb9INrt_XVGWOd2mek_REzPg1?usp=sharing)
   
 ***4. Mô tả về thuật toán máy học:***
-  + Sử dụng mô hình YOLOv5: YOLOv5 là một mô hình Object Detection thuộc họ mô hình YOLO
+  + Sử dụng mô hình [YOLOv5](https://github.com/ultralytics/yolov5): YOLOv5 là một mô hình Object Detection thuộc họ mô hình YOLO
   + YOLO là một thuật toán Single Stage Detector (Single Shot Detector), nghĩa là chúng sẽ dự đoán nhãn và vị trí của đối tượng trong toàn bộ bức ảnh chỉ với một lần chạy thuật toán duy nhất. Và tất nhiên, cách làm việc này giúp cho thời gian xử lý của YOLO rất nhanh, phù hợp với các ứng dụng cần chạy Realtime.
   + YOLO là một mô hình mạng neural tích chập (CNN) dùng cho việc phát hiện, nhận dạng, phân loại đối tượng. YOLO được tạo ra từ việc kết hợp giữa các lớp phức tạp (convolutional layers) cho phép trích xuất ra các đặc tính của ảnh và lớp kết nối (connected layers) dự đoán ra xác suất xuất hiện và tọa độ của đối tượng.
   + Cách làm viêc của YOLO có thể tóm tắt như sau:
@@ -48,9 +52,9 @@
       + Chiều cao của Bounding Box $(b_h)$
       + Nhãn của đối tượng trong Bounding Box (c)
       + Xác suất có đối tượng trong Bounding Box $(p_c)$
-      
-***5. Cài đặt, tinh chỉnh tham số:***
-
+     
 ***6. Đánh giá kết quả, kết luận:***
 
+
+=> Kết quả chạy trên [Colab](https://colab.research.google.com/drive/1YNQh8u59gZKF3RymvUp_BGZdewoUNNVv)
 
