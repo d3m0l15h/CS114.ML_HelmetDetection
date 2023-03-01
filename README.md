@@ -37,7 +37,7 @@
     + Tọa độ trung tâm của Bounding Box $(b_x,b_y)$
     + Chiều rộng của Bounding Box $(b_w)$
     + Chiều cao của Bounding Box $(b_h)$
-  + [Dataset](https://drive.google.com/drive/folders/1DSaJJoWNSciMpbE8Q3MllVowj5HERWa7?usp=share_link)
+  + [Dataset](https://drive.google.com/drive/folders/19v54FWdpb9INrt_XVGWOd2mek_REzPg1?usp=sharing)
   
 ***4. Mô tả về thuật toán máy học:***
   + Sử dụng mô hình [YOLOv5](https://github.com/ultralytics/yolov5): YOLOv5 là một mô hình Object Detection thuộc họ mô hình YOLO
